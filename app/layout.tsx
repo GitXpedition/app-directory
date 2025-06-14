@@ -1,11 +1,3 @@
-*
- * =================================================================
- * ARCHIVO: app/layout.tsx
- * INSTRUCTIONS: This version is corrected to fix the build error.
- * The font has been changed from 'Geist_Sans' to 'Inter', a
- * standard font that will resolve the "Unknown font" issue.
- * =================================================================
- */
 import '#/styles/globals.css';
 import db from '#/lib/db';
 import { GlobalNav } from '#/ui/global-nav';
@@ -20,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: { default: 'ArgenSource.com', template: '%s | ArgenSource' },
   description:
-    'Source Information for Advanced Industries. We connect industrial needs with the right suppliers through a unique and efficient classification system.',
+    'Source Information for Advanced Industries. The right suppliers through a unique and efficient classification system.',
 };
 
 export default function RootLayout({
@@ -28,16 +20,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // The original template fetches demo items for the nav. We keep this structure.
-  // Note: The content of `db.demo.findMany()` might need to be adapted later
-  // to reflect the ArgenSource sections.
   const navItems = db.demo.findMany();
 
   return (
     <html lang="en" className={`[color-scheme:dark] ${inter.variable}`}>
       <body className="overflow-y-scroll bg-gray-950 font-sans antialiased">
         <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-r lg:border-b-0 lg:border-gray-800">
-          {/* We use the real GlobalNav component from the template */}
           <GlobalNav items={navItems} />
         </div>
 
@@ -50,4 +38,3 @@ export default function RootLayout({
     </html>
   );
 }
-
