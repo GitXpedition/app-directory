@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: { default: 'ArgenSource.com', template: '%s | ArgenSource' },
   description:
-    'Source Information for Advanced Industries. The right suppliers through a unique and efficient classification system.',
+    'Source Information for Advanced Industries. We connect industrial needs with the right suppliers through a unique and efficient classification system.',
 };
 
 export default function RootLayout({

@@ -1,7 +1,6 @@
-// This is a mock database. The content of all constants
-// has been updated to reflect the ArgenSource project.
-// The 'products' constant now uses placeholder image URLs
-// with a neutral style to match the template's aesthetic.
+// This is a mock database. The content of ALL constants
+// has been updated to reflect the ArgenSource project,
+// preserving the original data structure and using placeholders for images.
 
 export type Product = {
   id: string;
@@ -34,7 +33,7 @@ export type Demo = {
 
 export type DemoCategory = { name: string; items: Demo[] };
 
-// --- MODIFIED DATA FOR ARGENSOURCE ---
+// --- ARGENSOURCE DATA ---
 
 const sections: Section[] = [
   { id: '1', name: 'Procesos Industriales', slug: 'procesos', categories: ['1', '2', '3'] },
@@ -71,7 +70,6 @@ const categories: Category[] = [
   },
 ];
 
-// Replaced local image names with full placeholder URLs using a neutral style
 const products: Product[] = [
   { id: '1', name: 'Servicio de Forjado', image: 'https://placehold.co/400x400/f0f0f0/333?text=Forjado', category: '1' },
   { id: '2', name: 'Servicio de Galvanizado', image: 'https://placehold.co/400x400/f0f0f0/333?text=Galvanizado', category: '2' },
@@ -87,93 +85,93 @@ const products: Product[] = [
 
 const demos = [
   {
-    name: 'Procesos de Transformación',
+    name: 'Layouts',
     items: [
       {
-        slug: 'fundicion',
-        name: 'Fundición',
-        description: 'Proveedores de procesos de fundición de acero, hierro y metales no ferrosos.',
+        slug: 'layouts',
+        name: 'Navegación y Categorías',
+        description: 'Explora cómo se comparten las interfaces entre diferentes rutas y categorías.',
       },
       {
-        slug: 'forjado',
-        name: 'Forjado',
-        description: 'Especialistas en forja de piezas para la industria automotriz, agrícola y petrolera.',
+        slug: 'route-groups',
+        name: 'Grupos de Rutas',
+        description: 'Organiza las rutas sin afectar las URLs de navegación.',
       },
       {
-        slug: 'mecanizado-de-precision',
-        name: 'Mecanizado de Precisión',
-        description: 'Servicios de mecanizado CNC, fresado y torneado con tolerancias exactas.',
+        slug: 'parallel-routes',
+        name: 'Rutas Paralelas',
+        description: 'Renderiza múltiples páginas en el mismo layout de forma simultánea.',
       },
     ],
   },
   {
-    name: 'Procesos de Acabado',
+    name: 'Convenciones de Archivos',
     items: [
       {
-        slug: 'tratamientos-termicos',
-        name: 'Tratamientos Térmicos',
+        slug: 'loading',
+        name: 'Estados de Carga (Loading)',
         description:
-          'Servicios de templado, revenido, recocido y nitrurado para modificar propiedades de materiales.',
+          'Crea interfaces de carga significativas para partes específicas de la aplicación.',
       },
       {
-        slug: 'tratamientos-superficiales',
-        name: 'Tratamientos Superficiales',
-        description: 'Procesos de galvanizado, cromado, pintado y pulido para protección y estética.',
+        slug: 'error',
+        name: 'Manejo de Errores',
+        description: 'Crea interfaces de error para partes específicas de la aplicación.',
       },
       {
-        slug: 'pintura-industrial',
-        name: 'Pintura Industrial',
-        description: 'Aplicación de recubrimientos y pinturas de alta resistencia para el sector industrial.',
+        slug: 'not-found',
+        name: 'Páginas No Encontradas',
+        description: 'Crea una interfaz personalizada para rutas que no existen.',
       },
     ],
   },
   {
-    name: 'Insumos Industriales',
+    name: 'Estrategias de Caching',
     items: [
       {
-        slug: 'materias-primas',
-        name: 'Materias Primas',
-        nav_title: 'Materias Primas',
-        description: 'Proveedores de aceros, polímeros, metales no ferrosos y otros insumos básicos.',
+        slug: 'cached-routes',
+        name: 'Rutas Cacheadas',
+        nav_title: 'Rutas Cacheadas',
+        description: 'Almacena en caché el resultado renderizado de un segmento de ruta.',
       },
       {
-        slug: 'materiales-de-proceso',
-        name: 'Materiales de Proceso',
-        nav_title: 'Materiales de Proceso',
+        slug: 'cached-components',
+        name: 'Componentes Cacheados',
+        nav_title: 'Componentes Cacheados',
         description:
-          'Consumibles para la producción: abrasivos, electrodos, fluidos de corte y herramientas.',
+          'Almacena en caché el resultado renderizado de un Componente de Servidor de React individual.',
       },
       {
-        slug: 'suministros-operativos',
-        name: 'Suministros Operativos',
-        description: 'Insumos para la operación de la planta: energía, lubricantes, gases industriales y útiles.',
+        slug: 'cached-functions',
+        name: 'Funciones Cacheadas',
+        description: 'Almacena en caché el resultado computado de una función regular.',
       },
     ],
   },
   {
-    name: 'Servicios Especializados',
+    name: 'APIs y Utilidades',
     items: [
       {
-        slug: 'matriceria-y-moldes',
-        name: 'Matricería y Moldes',
-        description: 'Diseño y fabricación de matrices, moldes y herramental para producción en serie.',
+        slug: 'use-link-status',
+        name: 'useLinkStatus',
+        description: 'Crea feedback visual en tiempo real para la interacción con los enlaces.',
       },
     ],
   },
   {
-    name: 'Ingeniería y Soporte',
+    name: 'Misceláneos',
     items: [
       {
-        slug: 'asesoramiento-y-proyectos',
-        name: 'Asesoramiento y Proyectos',
+        slug: 'view-transitions',
+        name: 'Transiciones de Vista',
         description:
-          'Servicios de consultoría técnica, ingeniería de producto y gestión de proyectos industriales.',
+          'Usa animaciones para ayudar a los usuarios a entender la relación entre dos vistas.',
       },
       {
-        slug: 'ensayos-y-certificaciones',
-        name: 'Ensayos y Certificaciones',
+        slug: 'context',
+        name: 'Contexto de Cliente',
         description:
-          'Laboratorios para ensayos de materiales, metrología y servicios de certificación de calidad.',
+          'Pasa contexto entre Componentes de Cliente que cruzan los límites de Servidor/Cliente.',
       },
     ],
   },
