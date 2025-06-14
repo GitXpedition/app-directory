@@ -1,20 +1,19 @@
-/*
+*
  * =================================================================
  * ARCHIVO: app/layout.tsx
- * INSTRUCTIONS: This is the corrected version that respects the
- * original template's structure, including the real GlobalNav
- * component and its data dependencies. The metadata has been
- * updated for ArgenSource.
+ * INSTRUCTIONS: This version is corrected to fix the build error.
+ * The font has been changed from 'Geist_Sans' to 'Inter', a
+ * standard font that will resolve the "Unknown font" issue.
  * =================================================================
  */
 import '#/styles/globals.css';
 import db from '#/lib/db';
 import { GlobalNav } from '#/ui/global-nav';
 import { Metadata } from 'next';
-import { Geist_Sans } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
-const geistSans = Geist_Sans({
-  variable: '--font-geist-sans',
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
 });
 
@@ -35,7 +34,7 @@ export default function RootLayout({
   const navItems = db.demo.findMany();
 
   return (
-    <html lang="en" className={`[color-scheme:dark] ${geistSans.variable}`}>
+    <html lang="en" className={`[color-scheme:dark] ${inter.variable}`}>
       <body className="overflow-y-scroll bg-gray-950 font-sans antialiased">
         <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-r lg:border-b-0 lg:border-gray-800">
           {/* We use the real GlobalNav component from the template */}
@@ -51,3 +50,4 @@ export default function RootLayout({
     </html>
   );
 }
+
