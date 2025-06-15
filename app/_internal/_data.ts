@@ -1,6 +1,6 @@
-// This is a mock database. The content of ALL constants
-// has been updated to reflect the ArgenSource project,
-// preserving the original data structure and using placeholders for images.
+// This is a mock database. The content of the 'demos' constant
+// has been updated with enriched text to reflect the ArgenSource project,
+// while preserving the original structure, slugs, and number of items.
 
 export type Product = {
   id: string;
@@ -26,7 +26,7 @@ export type Category = {
 
 export type Demo = {
   slug: string;
-  name: string;
+  name:string;
   nav_title?: string;
   description: string;
 };
@@ -74,7 +74,6 @@ const products: Product[] = [
   { id: '1', name: 'Servicio de Forjado', image: 'https://placehold.co/400x400/f0f0f0/333?text=Forjado', category: '1' },
   { id: '2', name: 'Servicio de Galvanizado', image: 'https://placehold.co/400x400/f0f0f0/333?text=Galvanizado', category: '2' },
   { id: '3', name: 'Diseño de Matriz Progresiva', image: 'https://placehold.co/400x400/f0f0f0/333?text=Matriz', category: '3' },
-
   { id: '4', name: 'Acero AISI 1045', image: 'https://placehold.co/400x400/f0f0f0/333?text=Acero', category: '4' },
   { id: '5', name: 'Fluidos de Corte', image: 'https://placehold.co/400x400/f0f0f0/333?text=Fluidos', category: '5' },
   { id: '6', name: 'Gas Argón Industrial', image: 'https://placehold.co/400x400/f0f0f0/333?text=Gas', category: '6' },
@@ -85,93 +84,93 @@ const products: Product[] = [
 
 const demos = [
   {
-    name: 'Layouts',
+    name: 'Plataforma y Clasificación',
     items: [
       {
         slug: 'layouts',
-        name: 'Navegación y Categorías',
-        description: 'Explora cómo se comparten las interfaces entre diferentes rutas y categorías.',
+        name: 'Navegación por Procesos',
+        description: 'Vea cómo nuestra clasificación le permite navegar desde procesos de transformación hasta tratamientos específicos.',
       },
       {
         slug: 'route-groups',
-        name: 'Grupos de Rutas',
-        description: 'Organiza las rutas sin afectar las URLs de navegación.',
+        name: 'Grupos de Suministro',
+        description: 'Organice su búsqueda agrupando proveedores por familias de insumos o servicios.',
       },
       {
         slug: 'parallel-routes',
-        name: 'Rutas Paralelas',
-        description: 'Renderiza múltiples páginas en el mismo layout de forma simultánea.',
+        name: 'Comparativa de Proveedores',
+        description: 'Visualice y compare las capacidades de múltiples proveedores en una sola vista.',
       },
     ],
   },
   {
-    name: 'Convenciones de Archivos',
+    name: 'Guías de Proveedores (Ejemplos)',
     items: [
       {
         slug: 'loading',
-        name: 'Estados de Carga (Loading)',
+        name: 'Perfiles de Proveedor (Cargando)',
         description:
-          'Crea interfaces de carga significativas para partes específicas de la aplicación.',
+          'Ejemplo de cómo se presentará la información de un proveedor mientras se carga.',
       },
       {
         slug: 'error',
-        name: 'Manejo de Errores',
-        description: 'Crea interfaces de error para partes específicas de la aplicación.',
+        name: 'Manejo de Errores de Búsqueda',
+        description: 'Visualice cómo la plataforma gestiona búsquedas que no arrojan resultados.',
       },
       {
         slug: 'not-found',
-        name: 'Páginas No Encontradas',
-        description: 'Crea una interfaz personalizada para rutas que no existen.',
+        name: 'Proveedores No Encontrados',
+        description: 'Interfaz para cuando un perfil de proveedor específico no está disponible.',
       },
     ],
   },
   {
-    name: 'Estrategias de Caching',
+    name: 'Beneficios y Eficiencia',
     items: [
       {
         slug: 'cached-routes',
-        name: 'Rutas Cacheadas',
-        nav_title: 'Rutas Cacheadas',
-        description: 'Almacena en caché el resultado renderizado de un segmento de ruta.',
+        name: 'Búsquedas Rápidas y Optimizadas',
+        nav_title: 'Búsquedas Optimizadas',
+        description: 'La plataforma optimiza y acelera las búsquedas recurrentes para ahorrarle tiempo.',
       },
       {
         slug: 'cached-components',
-        name: 'Componentes Cacheados',
-        nav_title: 'Componentes Cacheados',
+        name: 'Componentes de Ficha Técnica',
+        nav_title: 'Fichas Técnicas',
         description:
-          'Almacena en caché el resultado renderizado de un Componente de Servidor de React individual.',
+          'Las fichas de los proveedores se guardan para un acceso y una comparación más rápida.',
       },
       {
         slug: 'cached-functions',
-        name: 'Funciones Cacheadas',
-        description: 'Almacena en caché el resultado computado de una función regular.',
+        name: 'Cálculos y Reportes Eficientes',
+        description: 'Funciones internas que agilizan la generación de reportes y comparativas de costos.',
       },
     ],
   },
   {
-    name: 'APIs y Utilidades',
+    name: 'Herramientas para Compradores',
     items: [
       {
         slug: 'use-link-status',
-        name: 'useLinkStatus',
-        description: 'Crea feedback visual en tiempo real para la interacción con los enlaces.',
+        name: 'Gestor de Solicitudes (RFQ)',
+        description: 'Una herramienta para crear, enviar y dar seguimiento a sus Solicitudes de Cotización.',
       },
     ],
   },
   {
-    name: 'Misceláneos',
+    name: 'Acerca del Proyecto',
     items: [
       {
         slug: 'view-transitions',
-        name: 'Transiciones de Vista',
+        name: 'Visión del Proyecto',
         description:
-          'Usa animaciones para ayudar a los usuarios a entender la relación entre dos vistas.',
+          'Nuestra visión es transformar el aprovisionamiento industrial en Argentina.',
       },
       {
         slug: 'context',
-        name: 'Contexto de Cliente',
+        name: 'Contacto y Registro de Interés',
         description:
-          'Pasa contexto entre Componentes de Cliente que cruzan los límites de Servidor/Cliente.',
+          'Regístrese para ser el primero en acceder a la plataforma y recibir novedades.',
       },
     ],
   },
